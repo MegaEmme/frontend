@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const HomePage = () => {
 
-    const [films, setFilms] = useState([])
+    const [films, setFilms] = useState([]);
 
     const fetchFilms = () => {
         console.log("Fetching movies...");
@@ -16,7 +16,7 @@ const HomePage = () => {
             .catch(error => (console.error(error)))
     }
 
-    useEffect(fetchFilms, [])
+    useEffect(fetchFilms, []);
 
     return (
         <>
@@ -29,7 +29,7 @@ const HomePage = () => {
                 </ul>
             </section>
         </>
-    )
-}
+    );
+};
 
 export default HomePage;
