@@ -10,37 +10,41 @@ const FilmCard = (props) => {
     return (
         <>
             {isDetail === false && (
-                <div className="card movie-card rounded-4 bg-dark text-light shadow">
-                    <div className="card-header card-header-custom rounded-top-4">
-                        <h3 className="card-title text-center fw-bold mb-0 text-dark text-truncate movie-title">{title}
-                        </h3>
-                    </div>
-                    <div className="p-3 d-flex align-items-center justify-content-center">
-                        <img src={imageUrl} className="rounded-4 img-fluid img-custom" alt={title} />
-                    </div>
-                    <div className="card-body">
-                        <div className="d-flex flex-wrap gap-1 mb-3">
-                            {categories && categories.length > 0 ? (
-                                <>
-                                    <span>Genere:</span>
-                                    {categories.map((cat, index) => (
-                                        <span key={cat.id}>{cat.name}{index < categories.length - 1 && "/"}</span>
-                                    ))}
-                                </>
-                            ) : (
-                                <span>Nessun genere assegnato...</span>
-                            )}
+                <>
+                    <div className="card movie-card rounded-4 bg-dark text-light shadow">
+
+                        <div className="card-header card-header-custom rounded-top-4">
+                            <h3 className="card-title text-center fw-bold mb-0 text-dark text-truncate movie-title">{title}
+                            </h3>
                         </div>
-                        <div className="d-flex justify-content-between text-light mb-2">
-                            <h6 className="card-subtitle fw-bold">Durata: {duration} min</h6>
-                            <h6 className="card-subtitle">Anno: {year}</h6>
+                        <div className="p-3 d-flex align-items-center justify-content-center">
+                            <img src={imageUrl} className="rounded-4 img-fluid img-custom" alt={title} />
                         </div>
-                        <hr />
-                        <div className="d-flex justify-content-around mb-4">
-                            <Link to={`/films/${id}`} className="btn btn-outline-light btn-custom rounded-pill mx-2">Dettagli</Link>
+                        <div className="card-body">
+                            <div className="d-flex flex-wrap gap-1 mb-3">
+                                {categories && categories.length > 0 ? (
+                                    <>
+                                        <span>Genere:</span>
+                                        {categories.map((cat, index) => (
+                                            <span key={cat.id}>{cat.name}{index < categories.length - 1 && "/"}</span>
+                                        ))}
+                                    </>
+                                ) : (
+                                    <span className="mb-3 alert alert-info">Nessun genere assegnato...</span>
+                                )}
+                            </div>
+                            <div className="d-flex justify-content-between text-light mb-2">
+                                <h6 className="card-subtitle fw-bold">Durata: {duration} min</h6>
+                                <h6 className="card-subtitle">Anno: {year}</h6>
+                            </div>
+                            <hr />
+                            <div className="d-flex justify-content-around mb-4">
+                                <Link to={`/films/${id}`} className="btn btn-outline-light btn-custom rounded-pill mx-2">Dettagli</Link>
+                            </div>
                         </div>
                     </div>
-                </div>)}
+                </>
+            )}
             {isDetail === true && (
                 // 
                 <div className="card detail-card rounded-4 bg-dark text-light shadow-lg">
@@ -62,7 +66,7 @@ const FilmCard = (props) => {
                                         ))}
                                     </>
                                 ) : (
-                                    <span>Nessun genere assegnato...</span>
+                                    <span className="mb-3 alert alert-info">Nessun genere assegnato...</span>
                                 )}
                             </div>
                             <div className="d-flex justify-content-between text-light mb-4">
