@@ -25,8 +25,10 @@ const FilmPage = () => {
 
     return (
         <>
-            <h2>{film.title}</h2>
-            {film.id && <FilmCard film={film} isDetail={true} />}
+            <h1 className="text-center fw-bold">Dettaglio Film</h1>
+            <main className="container p-4">
+                {film.id && <FilmCard film={film} isDetail={true} />}
+            </main>
         </>
     );
 };

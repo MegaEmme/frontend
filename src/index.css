@@ -9,5 +9,62 @@
 }
 
 .filler {
-    height: 10vh;
+    height: 14vh;
+}
+
+/* INDEX */
+.movie-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.img-custom {
+    height: 20rem;
+    object-fit: contain;
+}
+
+.card-body-custom {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.card-text-custom {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.btn-custom {
+    margin-top: auto;
+}
+
+.card-header-custom {
+    background-color: #f8f9fa;
+}
+
+.movie-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+
+/* SHOW */
+.detail-card {
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
 }

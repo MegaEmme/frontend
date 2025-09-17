@@ -4,7 +4,7 @@ import { GlobalContext } from "../contexts/GlobalContext";
 import FilmCard from "../components/FilmCard";
 
 const HomePage = () => {
-    // Ricevo una lista di film, sui quali usare map., stato iniziale => array vuoto ([])
+    // Ricevo una lista di film, sui quali usare map, stato iniziale => array vuoto ([])
     const [films, setFilms] = useState([]);
     const { setIsLoading } = useContext(GlobalContext);
 
@@ -27,12 +27,16 @@ const HomePage = () => {
 
     return (
         <>
-            <h1>Cineteca</h1>
-            <section>
-                {
-                    films.map((film) => <FilmCard key={film.id} film={film} isDetail={false} />)
-                }
-            </section>
+            <h1 className="text-center fw-bold">Lista Film</h1>
+            <main className="container p-4">
+                <div className="row g-4">
+                    {films.map((film) => (
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-4">
+                            <FilmCard key={film.id} film={film} isDetail={false} />
+                        </div>
+                    ))}
+                </div>
+            </main>
         </>
     );
 };
