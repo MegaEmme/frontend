@@ -1,8 +1,10 @@
 const Loader = () => {
 
-    <div className="overlay">
-        <div className="spinner-border text-primary" role="status"></div>
-    </div>
-}
+    return (
+        <div className="overlay">
+            <div className="spinner-border text-dark" role="status"></div>
+        </div>
+    );
+};
 
-export default Loader
+export default Loader;
