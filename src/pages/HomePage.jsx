@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../contexts/GlobalContext";
+import FilmCard from "../components/FilmCard";
 
 const HomePage = () => {
 
@@ -28,11 +29,9 @@ const HomePage = () => {
         <>
             <h1>Cineteca</h1>
             <section>
-                <ul>
-                    {films.map((film) => (
-                        <li key={film.title}>{film.title}</li>
-                    ))}
-                </ul>
+                {
+                    films.map((film) => <FilmCard key={film.id} film={film} isDetail={false} />)
+                }
             </section>
         </>
     );
