@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const FilmCard = (props) => {
 
 
@@ -21,22 +23,21 @@ const FilmCard = (props) => {
                     ))}
                 </ul>
             </>
-
             <hr />
         </>
     );
 };
 
 FilmCard.propTypes = {
-    isDetail: propTypes.bool,
-    film: propTypes.shape({
-        id: propTypes.number.isRequired,
-        title: propTypes.string.isRequired,
-        imageUrl: propTypes.string.isRequired,
-        plot: propTypes.string,
-        year: propTypes.number.isRequired,
-        duration: propTypes.number.isRequired,
-        categories: propTypes.array
+    isDetail: PropTypes.bool,
+    film: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        plot: PropTypes.string,
+        year: PropTypes.number.isRequired,
+        duration: PropTypes.number.isRequired,
+        categories: PropTypes.array
     }).isRequired
 };
 
