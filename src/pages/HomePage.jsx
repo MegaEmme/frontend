@@ -4,7 +4,7 @@ import { GlobalContext } from "../contexts/GlobalContext";
 import FilmCard from "../components/FilmCard";
 
 const HomePage = () => {
-
+    // Ricevo una lista di film, sui quali usare map., stato iniziale => array vuoto ([])
     const [films, setFilms] = useState([]);
     const { setIsLoading } = useContext(GlobalContext);
 
