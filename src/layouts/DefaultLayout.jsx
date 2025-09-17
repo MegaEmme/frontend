@@ -15,8 +15,6 @@ const DefaultLayout = () => {
                 <Outlet />
                 {isLoading && <Loader />}
             </main>
-
-
         </>
     );
 };

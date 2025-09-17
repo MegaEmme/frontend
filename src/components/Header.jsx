@@ -5,8 +5,11 @@ const Header = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow fixed-top">
-                <div className="container-fluid justify-content-start">
-                    <Link className="navbar-brand" to="/">Lista Film</Link>
+                <div className="container-fluid">
+                    <a href="/" className="navbar-brand logo me-4"></a>
+                    <div className="container-fluid justify-content-start">
+                        <Link className="navbar-brand" to="/">Lista Film</Link>
+                    </div>
                 </div>
             </nav>
             <div className="filler"></div>
