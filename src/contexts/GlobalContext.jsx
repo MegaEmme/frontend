@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
-
-const GlobalContext = createContext();
+export const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
