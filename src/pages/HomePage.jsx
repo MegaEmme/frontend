@@ -21,7 +21,7 @@ const HomePage = () => {
             .then(() => {
                 setIsLoading(false);
             })
-    }
+    };
 
     useEffect(fetchFilms, []);
 

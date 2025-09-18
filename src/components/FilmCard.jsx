@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const FilmCard = (props) => {
 
-
     const isDetail = props.isDetail || false;
     const { id, title, imageUrl, plot, year, duration, categories } = props.film;
 
@@ -21,10 +20,10 @@ const FilmCard = (props) => {
                             <img src={imageUrl} className="rounded-4 img-fluid img-custom" alt={title} />
                         </div>
                         <div className="card-body">
-                            <div className="d-flex flex-wrap gap-1 mb-3">
+                            <div className="d-flex flex-wrap gap-1 mb-4 justify-content-center">
                                 {categories && categories.length > 0 ? (
                                     <>
-                                        <span>Genere:</span>
+                                        <span><strong>Genere:</strong></span>
                                         {categories.map((cat, index) => (
                                             <span key={cat.id}>{cat.name}{index < categories.length - 1 && "/"}</span>
                                         ))}
@@ -33,12 +32,7 @@ const FilmCard = (props) => {
                                     <span className="mb-3 alert alert-info">Nessun genere assegnato...</span>
                                 )}
                             </div>
-                            <div className="d-flex justify-content-between text-light mb-2">
-                                <h6 className="card-subtitle fw-bold">Durata: {duration} min</h6>
-                                <h6 className="card-subtitle">Anno: {year}</h6>
-                            </div>
-                            <hr />
-                            <div className="d-flex justify-content-around mb-4">
+                            <div className="d-flex justify-content-center mb-4">
                                 <Link to={`/films/${id}`} className="btn btn-outline-light btn-custom rounded-pill mx-2">Dettagli</Link>
                             </div>
                         </div>
@@ -77,7 +71,7 @@ const FilmCard = (props) => {
                             <h6 className="fw-bold">Trama:</h6>
                             <p className="card-text mb-4">{plot}</p>
                             <hr />
-                            <div className="d-flex justify-content-between mt-4">
+                            <div className="d-flex justify-content-end mt-4">
                                 <Link to={"/"} className="btn btn-outline-light btn-custom rounded-pill mx-2">Indietro</Link>
                             </div>
                         </div>
