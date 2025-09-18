@@ -28,6 +28,7 @@ const HomePage = () => {
     return (
         <>
             <h1 className="text-center fw-bold">Lista Film</h1>
+            <hr />
             <main className="container p-4">
                 <div className="row g-4">
                     {films.map((film) => (
