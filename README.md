@@ -1,4 +1,4 @@
-Parte 2: Sito guest in React
+# FRONTEND - Sito guest in React
 Per i visitatori non autenticati (guest) dovrete creare un'app in React che permetta di:
 
 ✅ Visualizzare la lista degli elementi (videogiochi, film, ecc.)
@@ -6,6 +6,9 @@ Per i visitatori non autenticati (guest) dovrete creare un'app in React che perm
 ✅ Mostrare anche le informazioni collegate (es. le categorie di appartenenza)
 
 Questa app dovrà comunicare con il backend tramite chiamate AJAX ad API REST, quindi nel backend dovrete creare un set di endpoint API per recuperare i dati.
+
+## Link al backend:
+`https://github.com/MegaEmme/backend`
 
 # React + Vite
 
