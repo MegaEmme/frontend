@@ -8,7 +8,7 @@ Per i visitatori non autenticati (guest) dovrete creare un'app in React che perm
 Questa app dovrà comunicare con il backend tramite chiamate AJAX ad API REST, quindi nel backend dovrete creare un set di endpoint API per recuperare i dati.
 
 ## Link al backend:
-`https://github.com/MegaEmme/backend`
+[Backend Repository](https://github.com/MegaEmme/backend)
 
 # React + Vite
 
