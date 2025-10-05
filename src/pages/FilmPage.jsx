@@ -6,7 +6,6 @@ import FilmCard from "../components/FilmCard";
 
 const FilmPage = () => {
     const { id } = useParams();
-    // Ricevo un singolo film, con le sue categorie, stato iniziale => oggetto vuoto ({})
     const [film, setFilm] = useState({});
     const { setIsLoading } = useContext(GlobalContext);
 
@@ -20,7 +19,6 @@ const FilmPage = () => {
             .catch(error => console.log(error))
             .then(() => { setIsLoading(false) })
     };
-
     useEffect(fetchFilm, []);
 
     return (
