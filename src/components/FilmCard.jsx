@@ -54,7 +54,7 @@ const FilmCard = (props) => {
 
                                 {categories && categories.length > 0 ? (
                                     <>
-                                        <span>Genere:</span>
+                                        <span><strong>Genere:</strong></span>
                                         {categories.map((cat, index) => (
                                             <span key={cat.id}>{cat.name}{index < categories.length - 1 && "/"}</span>
                                         ))}
