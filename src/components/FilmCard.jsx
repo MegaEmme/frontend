@@ -94,7 +94,5 @@ FilmCard.propTypes = {
         categories: PropTypes.array
     }).isRequired
 };
-// propTypes definisce i tipi di proprietà attesi dal componente React che lo usa.
-// Il codice assicura che il componente FilmCard venga utilizzato correttamente. Se un componente genitore tenta di renderizzare FilmCard fornendo, ad esempio, un film senza il title (che è isRequired), o fornendo un ID che è una stringa invece di un numero, React stamperà un avvertimento in console in modalità sviluppo
 
 export default FilmCard;
